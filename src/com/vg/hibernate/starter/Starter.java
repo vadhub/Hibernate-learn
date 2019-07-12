@@ -15,12 +15,18 @@ public class Starter {
 		
 		Session session = factory.getCurrentSession();
 		
-		Student student = new Student("Vasya", "Pupkin", "yoao@vg.com");
+		Student student1 = new Student("Vasya", "Pupkin", "yoao@vg.com");
+		//Student student2 = new Student("Petya", "Bol", "yomay@vg.com");
+		//Student student3 = new Student("Olya", "Soun", "ymoy@vg.com");
 		
 		session.beginTransaction();
 		
-		session.save(student);
+		//session.save(student);
+		//session.save(student2);
+		//session.save(student3);
+		Student student = session.get(Student.class, student1.getId());
 		
+		System.out.println(student1);
 		session.getTransaction().commit();
 		
 		factory.close();

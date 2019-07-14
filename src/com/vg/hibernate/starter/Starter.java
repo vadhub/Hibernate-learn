@@ -1,6 +1,8 @@
 package com.vg.hibernate.starter;
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -20,13 +22,23 @@ public class Starter {
 		//Student student3 = new Student("Olya", "Soun", "ymoy@vg.com");
 		
 		session.beginTransaction();
+		//CRUD
 		
+		//add to db student "C"
 		//session.save(student);
 		//session.save(student2);
 		//session.save(student3);
-		Student student = session.get(Student.class, student1.getId());
 		
-		System.out.println(student1);
+		//students to list "R"
+		//List<Student> studentosy = session.createQuery("from Student").list();
+		
+		//for(Student temp: studentosy) {
+		//	System.out.println(temp);
+		//}
+		
+		//update data "U"
+		
+		
 		session.getTransaction().commit();
 		
 		factory.close();

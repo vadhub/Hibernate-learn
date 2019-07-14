@@ -21,7 +21,8 @@ public class Starter {
 		//Student student2 = new Student("Petya", "Bol", "yomay@vg.com");
 		//Student student3 = new Student("Olya", "Soun", "ymoy@vg.com");
 		
-		session.beginTransaction();
+		//session.beginTransaction();
+		
 		//CRUD
 		
 		//add to db student "C"
@@ -49,7 +50,13 @@ public class Starter {
 		
 		//session.createQuery("update Student set email='dowe@gmail.com'").executeUpdate();
 		
-		//session.getTransaction().commit();
+		//delete data "D"
+		
+		Student student = session.get(Student.class, 3);
+		
+		session.delete(student);
+		
+		session.getTransaction().commit();
 		
 		factory.close();
 		

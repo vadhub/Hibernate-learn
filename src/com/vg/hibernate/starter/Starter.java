@@ -38,12 +38,18 @@ public class Starter {
 		
 		//update data "U"
 		
-		Student student = session.get(Student.class, 1);
-		System.out.println("update student from id 1");
+		//Student student = session.get(Student.class, 1);
+		//System.out.println("update student from id 1");
 		
-		student.setFirstName("Hiber");
+		//student.setFirstName("Hiber");
+		//session.getTransaction().commit();
 		
-		session.getTransaction().commit();
+		//session = factory.getCurrentSession();
+		session.beginTransaction();
+		
+		//session.createQuery("update Student set email='dowe@gmail.com'").executeUpdate();
+		
+		//session.getTransaction().commit();
 		
 		factory.close();
 		

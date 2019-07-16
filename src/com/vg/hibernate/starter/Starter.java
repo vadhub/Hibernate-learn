@@ -21,7 +21,7 @@ public class Starter {
 		//Student student2 = new Student("Petya", "Bol", "yomay@vg.com");
 		//Student student3 = new Student("Olya", "Soun", "ymoy@vg.com");
 		
-		//session.beginTransaction();
+		session.beginTransaction();
 		
 		//CRUD
 		
@@ -31,11 +31,11 @@ public class Starter {
 		//session.save(student3);
 		
 		//students to list "R"
-		//List<Student> studentosy = session.createQuery("from Student").list();
+		List<Student> studentosy = session.createQuery("from Student").list();
 		
-		//for(Student temp: studentosy) {
-		//	System.out.println(temp);
-		//}
+		for(Student temp: studentosy) {
+			System.out.println(temp);
+		}
 		
 		//update data "U"
 		
@@ -46,20 +46,24 @@ public class Starter {
 		//session.getTransaction().commit();
 		
 		//session = factory.getCurrentSession();
-		session.beginTransaction();
+		//session.beginTransaction();
 		
 		//session.createQuery("update Student set email='dowe@gmail.com'").executeUpdate();
 		
 		//delete data "D"
 		
-		Student student = session.get(Student.class, 3);
+		//Student student = session.get(Student.class, 3);
 		
-		session.delete(student);
+		//session.delete(student);
+		
+		//alt
+		//session.createQuery("delete from Strudent where id = 2").executeUpdate();
 		
 		session.getTransaction().commit();
 		
 		factory.close();
 		
+		//CRUD
 		System.out.println("woohoo!");
 	}
 	

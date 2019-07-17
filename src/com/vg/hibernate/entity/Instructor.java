@@ -19,10 +19,10 @@ public class Instructor {
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "first-name")
+	@Column(name = "first_name")
 	private String firstName;
 	
-	@Column(name = "last-name")
+	@Column(name = "last_name")
 	private String lastName;
 	
 	@OneToOne(cascade = CascadeType.ALL)

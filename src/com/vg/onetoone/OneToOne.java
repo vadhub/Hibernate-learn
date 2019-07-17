@@ -24,7 +24,7 @@ public class OneToOne {
 		session.beginTransaction();		
 		
 		System.out.println("Save!");
-		session.save(inDetail1);
+		session.save(instructor);
 		
 		System.out.println("Save! WoooHooo!");
 		

@@ -26,6 +26,8 @@ public class BiDirectionRunner {
 		
 		factory.close();
 		
+		session.close();
+		
 		System.out.println("Woohoo");
 	}
 

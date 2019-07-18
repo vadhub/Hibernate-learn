@@ -17,7 +17,7 @@ public class OneToOneDelete {
 		session.beginTransaction();		
 		
 		//get instructor by primary key
-		InstructorDetail tempInstructor = session.get(InstructorDetail.class, 2);
+		InstructorDetail tempInstructor = session.get(InstructorDetail.class, 4);
 		
 		//delete instructor
 		if(tempInstructor != null) {

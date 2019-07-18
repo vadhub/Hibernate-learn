@@ -17,13 +17,11 @@ public class OneToOneDelete {
 		session.beginTransaction();		
 		
 		//get instructor by primary key
-		InstructorDetail tempInstructor = session.get(InstructorDetail.class, 4);
+		InstructorDetail tempInstructor = session.get(InstructorDetail.class, 5);
 		
 		//delete instructor
-		if(tempInstructor != null) {
-			session.delete(tempInstructor);
-			System.out.println("Delete! WoooHooo!");
-		}
+		tempInstructor.getInstructor().setInstructorDetail(null);
+		session.delete(tempInstructor);
 		
 		session.getTransaction().commit();
 		
